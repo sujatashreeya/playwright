@@ -8,8 +8,8 @@ var {checkBoxObj, radioButtonObj} = require("../../../commonFunction/checkBox.js
 var loginPage = async (page,username,password) => {
     await typeObj(page,"locator",userName,username);
     await typeObj(page,"locator",passWord,password);
-    await page.waitForTimeout(7000);
-    await clickOnElement(page,"locator", loginButton )
+    await page.waitForTimeout(3000);
+    await clickOnElement(page,"locator", loginButton );
     await page.waitForTimeout(20000);
 
 }

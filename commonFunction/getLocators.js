@@ -33,7 +33,7 @@ module.exports = {
     },
 
 
-    async getAllLocator(locatorType, locator){
+    async getAllLocator(page, locatorType, locator){
         var ele;
         
         switch(locatorType){

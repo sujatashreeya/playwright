@@ -31,7 +31,14 @@ module.exports = defineConfig({
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   //  reporter: 'html',
-   reporter: 'list',
+   reporter: [
+    ["line"],
+    ["html"],
+    ['./my-awsome-reporter.js'],
+    ['allure-playwright', {outputFolder: 'allure-results'}]
+   ],
+
+   //'list',
   // reporter: 'line',
   // reporter: 'dot',
   //  reporter: [['junit', { outputFile: 'results.xml' }]],
